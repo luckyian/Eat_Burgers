@@ -18,7 +18,7 @@
   <button type="submit">Add burger!</button>
 </form>
 
-<h2>Update a burger</h2>
+<h2>Devour a burger</h2>
 <form id="updateburger" class="button-size">
   <select name="id">
 		{{#each burgers}}
@@ -30,11 +30,26 @@
 </form>
 
 <script type="text/javascript">
-  $(".delburger").on("click", function(event) {
+  $("#updateburger").on("click", function(event) {
     // Get the ID from the button.
     // This is shorthand for $(this).attr("data-burgerid")
     var id = $(this).data("burgerid");
+    var newburger = {
+      burger: $("#updateburger").val().trim()
+    };
 
+    // Send the POST request.
+    $.ajax("/api/devoured", {
+      type: "POST",
+      data: newburger
+    }).then(
+      function() {
+        console.log("devoured a burger");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
     // Send the DELETE request.
     $.ajax("/api/burgers/" + id, {
       type: "DELETE"
