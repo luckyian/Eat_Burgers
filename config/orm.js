@@ -91,17 +91,3 @@ var orm = {
 
 // Export the orm object for the model (burger.js).
 module.exports = orm;
-
-
-// connection.query("SELECT * FROM burgers;", function (err, data) {
-//     if (err) {
-//         return res.status(500).end();
-//     }
-// });
-// connection.query("INSERT INTO burgers (burger) VALUES (?)", [req.body.burgers], function (err, result) {
-//     if (err) {
-//         return res.status(500).end();
-//     }
-// });
-
-// connection.query("UPDATE ")
