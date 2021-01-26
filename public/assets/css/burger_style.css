@@ -1,3 +1,35 @@
 #mainBody {
     background-image: url(../img/Burger.jpg) ;
 }
+
+#pageTitle {
+text-align: center;
+}
+
+#burgerList {
+padding: 10%;
+}
+
+#allBurgerList{
+font-size: 25px;
+}
+
+#burgerDashboard {
+
+}
+
+#createburger{
+    padding: 10%;
+}
+
+#updateburger{
+    
+}
+
+#devouredBurger{
+    padding: 10%;
+}
+
+#eatenBurgers{
+    padding: 10%;
+}
