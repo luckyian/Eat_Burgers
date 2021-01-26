@@ -20,38 +20,45 @@
             {{/each}}
           </ul>
           <h2 class="card-subtitle">Add a burger</h2>
-          <form id="createburger" class="button-size">
-            <textarea type="text" name="burger" id="burgerName"></textarea>
-            <button type="submit">Add burger!</button>
-          </form>
+          <form>
+            <labelclass="form-label">Burger</label>
+              <input type="password" class="form-control" id="createburger">
+              <button type="submit" class="btn btn-success">Submit</button>
+              {{!-- <form id="createburger" class="form-control"> --}}
+                {{!-- <textarea type="text" name="burger" id="burgerName"></textarea>
+                <button type="submit">Add burger!</button> --}}
+              </form>
         </div>
       </div>
     </div>
+
     <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Burgers that have been eaten!</h2>
 
-
-      <h2>Burgers that have been eaten!</h2>
-
-      <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        {{!-- {{burgers devoured=true}} --}}
-        {{id}}-{{burger}}
-        {{/if}}
-        {{/each}}
-      </ul>
-      <h2>Devour a burger</h2>
-      <form id="updateburger" class="button-size">
-        <select name="id" id="devouredBurger">
-          {{#each burgers}}
-          {{#unless devoured}}
-          <option value={{this.id}}>{{this.burger}}</option>
-          {{/unless}}
-          {{/each}}
-        </select>
-        {{!-- <textarea type="text" name="burger" placeholder="burger"></textarea> --}}
-        <button type="submit" id="devoured">Devour it!</button>
-      </form>
+          <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            {{!-- {{burgers devoured=true}} --}}
+            {{id}}-{{burger}}
+            {{/if}}
+            {{/each}}
+          </ul>
+          <h2 class="card-subtitle">Devour a burger</h2>
+          <form id="updateburger" class="button-size">
+            <select name="id" id="devouredBurger">
+              {{#each burgers}}
+              {{#unless devoured}}
+              <option value={{this.id}}>{{this.burger}}</option>
+              {{/unless}}
+              {{/each}}
+            </select>
+            {{!-- <textarea type="text" name="burger" placeholder="burger"></textarea> --}}
+            <button type="submit" class="btn btn-danger">Devour a burger!</button>
+          </form>
+        </div>
+      </div>
     </div>
 
 
