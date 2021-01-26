@@ -1,6 +1,6 @@
 <div class="container">
   <!-- Content here -->
-  <h1>Burger List</h1>
+  <h1 id="pageTitle">Burger List</h1>
   <div class="row align-items-center">
 
 
@@ -13,35 +13,28 @@
           <ul>
             {{#each burgers}}
             {{#unless devoured}}
-            
-            {{id}}-{{burger}}
+
+            <li>{{id}}-{{burger}}</li>
             {{/unless}}
 
             {{/each}}
           </ul>
-          <h2 class="card-subtitle">Add a burger</h2>
-       
-              <form id="createburger" class="form-control">
-                <textarea type="text" name="burger" id="burgerName"></textarea>
-                <button type="submit" class="btn btn-success">Add burger!</button>
-              </form>
         </div>
       </div>
     </div>
-
     <div class="col">
+
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title">Burgers that have been eaten!</h2>
+          <h2 class="card-title">Add a burger</h2>
 
-          <ul>
-            {{#each burgers}}
-            {{#if devoured}}
-           
-            {{id}}-{{burger}}
-            {{/if}}
-            {{/each}}
-          </ul>
+
+
+          <form id="createburger" class="form-control">
+            <textarea type="text" name="burger" id="burgerName"></textarea>
+            <button type="submit" class="btn btn-success">Add burger!</button>
+          </form>
+          
           <h2 class="card-subtitle">Devour a burger</h2>
           <form id="updateburger" class="button-size">
             <select name="id" id="devouredBurger">
@@ -58,11 +51,29 @@
       </div>
     </div>
 
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Burgers that have been eaten!</h2>
+
+          <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+
+            <li> {{id}}-{{burger}} </li>
+            {{/if}}
+            {{/each}}
+          </ul>
+
+        </div>
+      </div>
+    </div>
 
 
 
 
-    
+
+
     <script type="text/javascript">
 
 
