@@ -13,20 +13,17 @@
           <ul>
             {{#each burgers}}
             {{#unless devoured}}
-            {{!-- {{> burgers devoured=false}} --}}
+            
             {{id}}-{{burger}}
             {{/unless}}
 
             {{/each}}
           </ul>
           <h2 class="card-subtitle">Add a burger</h2>
-          <form>
-            <labelclass="form-label">Burger</label>
-              <input type="password" class="form-control" id="createburger">
-              <button type="submit" class="btn btn-success">Submit</button>
-              {{!-- <form id="createburger" class="form-control"> --}}
-                {{!-- <textarea type="text" name="burger" id="burgerName"></textarea>
-                <button type="submit">Add burger!</button> --}}
+       
+              <form id="createburger" class="form-control">
+                <textarea type="text" name="burger" id="burgerName"></textarea>
+                <button type="submit" class="btn btn-success">Add burger!</button>
               </form>
         </div>
       </div>
@@ -40,7 +37,7 @@
           <ul>
             {{#each burgers}}
             {{#if devoured}}
-            {{!-- {{burgers devoured=true}} --}}
+           
             {{id}}-{{burger}}
             {{/if}}
             {{/each}}
@@ -54,9 +51,9 @@
               {{/unless}}
               {{/each}}
             </select>
-            {{!-- <textarea type="text" name="burger" placeholder="burger"></textarea> --}}
-            <button type="submit" class="btn btn-danger">Devour a burger!</button>
+            <button type="submit" class="btn btn-danger" id="devoured">Devour a burger!</button>
           </form>
+
         </div>
       </div>
     </div>
@@ -65,9 +62,9 @@
 
 
 
-    {{!--
+    
     <script type="text/javascript">
 
 
-    </script> --}}
+    </script>
   </div>
