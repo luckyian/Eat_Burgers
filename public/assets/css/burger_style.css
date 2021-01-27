@@ -15,7 +15,8 @@ font-size: 25px;
 }
 
 #burgerDashboard {
-
+padding: 10px;
+text-align: center;
 }
 
 #createburger{
@@ -23,7 +24,7 @@ font-size: 25px;
 }
 
 #updateburger{
-    
+    padding: 5%;
 }
 
 #devouredBurger{
