@@ -1,4 +1,4 @@
-const connection = require("./connection.js")
+const connection = require("./connection")
 
 // Helper function for SQL syntax.
 // Let's say we want to pass 2 values into the mySQL query.
