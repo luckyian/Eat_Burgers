@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
         user: "root",
         password: "187onacop",
         database: "burgers_db",
-    });
+    })
 };
 
 
